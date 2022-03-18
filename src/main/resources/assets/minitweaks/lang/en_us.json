@@ -3,5 +3,9 @@
   "item.minitweaks.minicharcoal": "Mini Charcoal",
   "item.minitweaks.friedegg": "Fried Egg",
   "block.minitweaks.block_charcoal": "Charcoal Block",
+  "block.minitweaks.block_flint": "Flint Block",
+  "block.minitweaks.block_sugar": "Sugar Block",
+  "block.minitweaks.block_enderpearl": "Ender Pearl Block",
+  "block.minitweaks.block_glowingglass": "Glowing Glass Block",
   "itemGroup.minitweaksgroup": "Mini Tweaks"
 }

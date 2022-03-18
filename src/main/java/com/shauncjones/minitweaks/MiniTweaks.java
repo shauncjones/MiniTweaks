@@ -6,6 +6,8 @@ import com.shauncjones.minitweaks.core.MiniTweaksFuelHandler;
 import com.shauncjones.minitweaks.items.MiniTweakItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -42,6 +44,7 @@ public class MiniTweaks
         MiniTweakItems.register(eventBus);
         MiniTweakBlocks.register(eventBus);
 
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
@@ -50,8 +53,13 @@ public class MiniTweaks
         MinecraftForge.EVENT_BUS.register(MiniTweaksFuelHandler.instance);
     }
 
+    private void clientSetup(final FMLClientSetupEvent event){
+        RenderTypeLookup.setRenderLayer(MiniTweakBlocks.BLOCK_GLOWINGGLASS.get(), RenderType.getCutout());
+    }
+
     private void setup(final FMLCommonSetupEvent event) {
         LOGGER.info("MiniTweaks: Loading MiniTweaks Version 1.16.5-0.0.1.0");
+
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {
@@ -66,4 +74,10 @@ public class MiniTweaks
     public void onServerStarting(FMLServerStartingEvent event) {
 
     }
+
+    @SubscribeEvent()
+    public static void onClientSetupEvent(FMLClientSetupEvent event) {
+
+    }
+
 }

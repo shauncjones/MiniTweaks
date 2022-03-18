@@ -2,6 +2,7 @@ package com.shauncjones.minitweaks.blocks;
 
 import com.shauncjones.minitweaks.MiniTweaks;
 import com.shauncjones.minitweaks.blocks.custom.CharcoalBlock;
+import com.shauncjones.minitweaks.blocks.custom.GlowingGlassBlock;
 import com.shauncjones.minitweaks.items.MiniTweakGroup;
 import com.shauncjones.minitweaks.items.MiniTweakItems;
 import net.minecraft.block.AbstractBlock;
@@ -28,7 +29,7 @@ public class MiniTweakBlocks {
     public static final RegistryObject<Block> BLOCK_FLINT = registerBlock("block_flint", () -> new Block(AbstractBlock.Properties.create(Material.ROCK).harvestLevel(1).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(5f)));
     public static final RegistryObject<Block> BLOCK_SUGAR = registerBlock("block_sugar", () -> new Block(AbstractBlock.Properties.create(Material.SNOW_BLOCK).harvestLevel(1).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(5f)));
     public static final RegistryObject<Block> BLOCK_ENDERPEARL = registerBlock("block_enderpearl", () -> new Block(AbstractBlock.Properties.create(Material.SNOW_BLOCK).harvestLevel(1).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(5f)));
-    public static final RegistryObject<Block> BLOCK_GLOWINGGLASS = registerBlock("block_glowingglass", () -> new Block(AbstractBlock.Properties.create(Material.SNOW_BLOCK).harvestLevel(1).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(5f).setLightLevel(BlockState -> 15)));
+    public static final RegistryObject<Block> BLOCK_GLOWINGGLASS = registerBlock("block_glowingglass", () -> new GlowingGlassBlock());
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

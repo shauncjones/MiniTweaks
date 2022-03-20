@@ -4,18 +4,22 @@ import com.shauncjones.minitweaks.blocks.MiniTweakBlocks;
 import com.shauncjones.minitweaks.core.MiniTweaksConfig;
 import com.shauncjones.minitweaks.core.MiniTweaksFuelHandler;
 import com.shauncjones.minitweaks.items.MiniTweakItems;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -35,19 +39,26 @@ public class MiniTweaks
 {
 
     public static final String MODID = "minitweaks";
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
+
+    private IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
     public MiniTweaks() {
-
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
-        MiniTweakItems.register(eventBus);
-        MiniTweakBlocks.register(eventBus);
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
+
+        //Register config
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MiniTweaksConfig.COMMON_SPEC);
+
+        //Register items & blocks based on config
+        MiniTweakBlocks.RegisterPerConfig();
+        MiniTweakItems.RegisterPerConfig();
+
+        MiniTweakItems.register(eventBus);
+        MiniTweakBlocks.register(eventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(MiniTweaksFuelHandler.instance);
@@ -59,6 +70,7 @@ public class MiniTweaks
 
     private void setup(final FMLCommonSetupEvent event) {
         LOGGER.info("MiniTweaks: Loading MiniTweaks Version 1.16.5-0.0.1.0");
+        LOGGER.info("MiniTweaks: Loaded " + MiniTweakItems.ITEMS.getEntries().size() + " items & " + MiniTweakBlocks.BLOCKS.getEntries().size() + " blocks.");
 
     }
 

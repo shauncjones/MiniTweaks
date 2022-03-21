@@ -4,6 +4,8 @@ import net.minecraft.item.Food;
 
 public class FoodLists {
 
-    public static final Food FriedEgg = new Food.Builder().hunger(8).saturation(2f).build();
+    public static final Food FriedEgg = new Food.Builder().hunger(6).saturation(7f).build();
+    public static final Food EggSandwich = new Food.Builder().hunger(6).saturation(7f).build();
+    public static final Food ScrambledEgg = new Food.Builder().hunger(6).saturation(7f).build();
 
 }

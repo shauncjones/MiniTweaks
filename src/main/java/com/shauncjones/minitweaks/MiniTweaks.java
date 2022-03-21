@@ -44,6 +44,7 @@ public class MiniTweaks
     private IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
     public MiniTweaks() {
+        LOGGER.info("MiniTweaks: Loading MiniTweaks Version 1.16.5-0.0.1.4");
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -56,9 +57,13 @@ public class MiniTweaks
         //Register items & blocks based on config
         MiniTweakBlocks.RegisterPerConfig();
         MiniTweakItems.RegisterPerConfig();
+        LOGGER.info("MiniTweals: Loaded Configs");
 
         MiniTweakItems.register(eventBus);
         MiniTweakBlocks.register(eventBus);
+
+        LOGGER.info("MiniTweaks: Loaded " + MiniTweakItems.ITEMS.getEntries().size() + " items & " + MiniTweakBlocks.BLOCKS.getEntries().size() + " blocks.");
+
 
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(MiniTweaksFuelHandler.instance);
@@ -69,8 +74,6 @@ public class MiniTweaks
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-        LOGGER.info("MiniTweaks: Loading MiniTweaks Version 1.16.5-0.0.1.0");
-        LOGGER.info("MiniTweaks: Loaded " + MiniTweakItems.ITEMS.getEntries().size() + " items & " + MiniTweakBlocks.BLOCKS.getEntries().size() + " blocks.");
 
     }
 

@@ -39,7 +39,7 @@ public class MiniTweakBlocks {
     }
 
     public static void RegisterPerConfig(){
-        MiniTweaks.LOGGER.info("MiniTweaks: Filtering Items & Blocks from Config.");
+        MiniTweaks.LOGGER.info("MiniTweaks: Filtering Blocks from Config.");
         if(MiniTweaksConfig.COMMON.block_charcoal.get()){
             BLOCK_CHARCOAL = registerBlock("block_charcoal", () -> new CharcoalBlock(AbstractBlock.Properties.create(Material.ROCK).harvestLevel(1).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(5f)));
         }

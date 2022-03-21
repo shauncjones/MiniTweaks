@@ -19,14 +19,26 @@ public class MiniTweaksConfig {
 
         //Items
         public static ForgeConfigSpec.ConfigValue<Boolean> item_minicoal;
+        public static ForgeConfigSpec.ConfigValue<Boolean> item_nightvisiongoggle;
 
         //Foods
         public static ForgeConfigSpec.ConfigValue<Boolean> food_friedegg;
 
+        //Tools
+        public static ForgeConfigSpec.ConfigValue<Boolean> tools_flint;
+        public static ForgeConfigSpec.ConfigValue<Boolean> tools_lapis;
+        public static ForgeConfigSpec.ConfigValue<Boolean> tools_emerald;
+        public static ForgeConfigSpec.ConfigValue<Boolean> tools_paxels;
+
+        //Armor
+
+        //Fuels
+        public static ForgeConfigSpec.ConfigValue<Boolean> fuel_beds;
+        public static ForgeConfigSpec.ConfigValue<Boolean> fuel_doors;
+
 
         public Common(ForgeConfigSpec.Builder builder) {
             builder.push("Blocks");
-            //Blocks
             this.block_charcoal = builder.define("Load Charcoal Block?", true);
             this.block_flint = builder.define("Load Flint Block?", true);
             this.block_sugar = builder.define("Load Sugar Block?", true);
@@ -34,12 +46,17 @@ public class MiniTweaksConfig {
             this.block_glowingglass = builder.define("Load Glowing Glass Block?", true);
             builder.pop();
             builder.push("Items");
-            //Items
             this.item_minicoal = builder.define("Load Mini Coal & Mini Charcoal?", true);
+            this.item_nightvisiongoggle = builder.define("Load Night Vision Goggles?",true);
             builder.pop();
             builder.push("Foods");
-            //Foods
             this.food_friedegg = builder.define("Load Fried Egg?", true);
+            builder.pop();
+            builder.push("Tools");
+            this.tools_flint = builder.define("Load Flint Tools?", true);
+            this.tools_lapis = builder.define("Load Lapis Lazuli Tools?", true);
+            this.tools_emerald = builder.define("Load Emerald Tools?", true);
+            this.tools_paxels = builder.define("Load Vanilla Paxels?", true);
             builder.pop();
         }
     }

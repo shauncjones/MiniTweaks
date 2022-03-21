@@ -21,6 +21,11 @@
   "item.minitweaks.emerald_shovel": "Emerald Shovel",
   "item.minitweaks.emerald_hoe": "Emerald Hoe",
   "item.minitweaks.emerald_paxel": "Emerald Paxel",
+  "item.minitweaks.emerald_helmet": "Emerald Helmet",
+  "item.minitweaks.emerald_chestplate": "Emerald Helmet",
+  "item.minitweaks.emerald_leggings": "Emerald Helmet",
+  "item.minitweaks.emerald_boots": "Emerald Helmet",
+  "item.minitweaks.goggles_helmet": "Night Vision Goggles",
   "item.minitweaks.stone_paxel": "Stone Paxel",
   "item.minitweaks.iron_paxel": "Iron Paxel",
   "item.minitweaks.gold_paxel": "Gold Paxel",
@@ -31,5 +36,6 @@
   "block.minitweaks.block_sugar": "Sugar Block",
   "block.minitweaks.block_enderpearl": "Ender Pearl Block",
   "block.minitweaks.block_glowingglass": "Glowing Glass Block",
-  "itemGroup.minitweaksgroup": "Mini Tweaks"
+  "itemGroup.minitweaksgroup": "Mini Tweaks",
+  "config.minitweaks.minicoalconfig": "Load Mini Coal and Mini Charcoal?"
 }

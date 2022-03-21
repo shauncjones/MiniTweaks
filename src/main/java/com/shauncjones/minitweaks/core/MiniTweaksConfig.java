@@ -11,18 +11,14 @@ public class MiniTweaksConfig {
     public static class Common {
 
         //Blocks
-        public static ForgeConfigSpec.ConfigValue<Boolean> block_charcoal;
-        public static ForgeConfigSpec.ConfigValue<Boolean> block_flint;
-        public static ForgeConfigSpec.ConfigValue<Boolean> block_sugar;
-        public static ForgeConfigSpec.ConfigValue<Boolean> block_enderpearl;
-        public static ForgeConfigSpec.ConfigValue<Boolean> block_glowingglass;
+        public static ForgeConfigSpec.ConfigValue<Boolean> block_charcoal, block_flint, block_sugar, block_enderpearl, block_glowingglass;
 
         //Items
         public static ForgeConfigSpec.ConfigValue<Boolean> item_minicoal;
         public static ForgeConfigSpec.ConfigValue<Boolean> item_nightvisiongoggle;
 
         //Foods
-        public static ForgeConfigSpec.ConfigValue<Boolean> food_friedegg;
+        public static ForgeConfigSpec.ConfigValue<Boolean> food_friedegg, food_eggsandwich, food_scrambledegg, food_breadslice;
 
         //Tools
         public static ForgeConfigSpec.ConfigValue<Boolean> tools_flint;
@@ -31,10 +27,10 @@ public class MiniTweaksConfig {
         public static ForgeConfigSpec.ConfigValue<Boolean> tools_paxels;
 
         //Armor
+        public static ForgeConfigSpec.ConfigValue<Boolean> armor_emerald;
 
         //Fuels
-        public static ForgeConfigSpec.ConfigValue<Boolean> fuel_beds;
-        public static ForgeConfigSpec.ConfigValue<Boolean> fuel_doors;
+        public static ForgeConfigSpec.ConfigValue<Boolean> fuel_beds, fuels_doors, fuels_slabs, fuels_stairs, fuels_fence, fuels_boats, fuels_misc;
 
 
         public Common(ForgeConfigSpec.Builder builder) {
@@ -57,6 +53,9 @@ public class MiniTweaksConfig {
             this.tools_lapis = builder.define("Load Lapis Lazuli Tools?", true);
             this.tools_emerald = builder.define("Load Emerald Tools?", true);
             this.tools_paxels = builder.define("Load Vanilla Paxels?", true);
+            builder.pop();
+            builder.push("Armor");
+            this.armor_emerald = builder.define("Load Emerald Armor?", true);
             builder.pop();
         }
     }

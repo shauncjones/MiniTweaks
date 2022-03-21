@@ -26,11 +26,7 @@ public class MiniTweakBlocks {
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, MiniTweaks.MODID);
 
-    public static RegistryObject<Block> BLOCK_ENDERPEARL;
-    public static RegistryObject<Block> BLOCK_GLOWINGGLASS;
-    public static RegistryObject<Block> BLOCK_CHARCOAL;
-    public static RegistryObject<Block> BLOCK_FLINT;
-    public static RegistryObject<Block> BLOCK_SUGAR;
+    public static RegistryObject<Block> BLOCK_CHARCOAL, BLOCK_FLINT, BLOCK_SUGAR, BLOCK_ENDERPEARL, BLOCK_GLOWINGGLASS;
 
     public static class Properties {
 

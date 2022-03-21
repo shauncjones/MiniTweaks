@@ -1,4 +1,4 @@
-package com.shauncjones.minitweaks.materials;
+package com.shauncjones.minitweaks.items.tools;
 
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Items;
@@ -23,11 +23,11 @@ public enum MiniTweaksToolTiers implements IItemTier {
     //Harvest Level: 4, Max Uses: 2031, Efficiency: 9.0f, Attack Damage: 4.0f, Enchantability: 15, Ingredients: Netherite
 
     FLINT(2,200,3.0f,1.0f,5,
-            () -> Ingredient.fromItems(Items.FLINT.getItem())),
+            () -> Ingredient.fromItems(Items.FLINT)),
     LAPIS(2,200,3.0f,1.0f,5,
-            () -> Ingredient.fromItems(Items.LAPIS_LAZULI.getItem())),
-    EMERALD(3,1750,12.0f,2.0f,22,
-            () -> Ingredient.fromItems(Items.EMERALD.getItem()));
+            () -> Ingredient.fromItems(Items.LAPIS_LAZULI)),
+    EMERALD(3,1750,8f,2.0f,22,
+            () -> Ingredient.fromItems(Items.EMERALD));
 
     private final int harvestLevel;
     private final int maxUses;

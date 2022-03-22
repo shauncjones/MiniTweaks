@@ -39,12 +39,12 @@ public class MiniTweakBlocks {
         if(MiniTweaksConfig.COMMON.block_charcoal.get()){
             BLOCK_CHARCOAL = registerBlock("block_charcoal", () -> new CharcoalBlock(AbstractBlock.Properties.create(Material.ROCK).harvestLevel(1).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(5f)));
         }
-        if(MiniTweaksConfig.COMMON.block_flint.get()){
+        /*if(MiniTweaksConfig.COMMON.block_flint.get()){
             BLOCK_FLINT = registerBlock("block_flint", () -> new Block(AbstractBlock.Properties.create(Material.ROCK).harvestLevel(1).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(5f)));
         }
         if(MiniTweaksConfig.COMMON.block_sugar.get()){
             BLOCK_SUGAR = registerBlock("block_sugar", () -> new Block(AbstractBlock.Properties.create(Material.SNOW_BLOCK).harvestLevel(1).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(5f)));
-        }
+        }*/
         if(MiniTweaksConfig.COMMON.block_enderpearl.get()){
             BLOCK_ENDERPEARL = registerBlock("block_enderpearl", () -> new Block(AbstractBlock.Properties.create(Material.SNOW_BLOCK).harvestLevel(1).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(5f)));
         }

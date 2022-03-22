@@ -21,10 +21,10 @@ public class MiniTweakItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MiniTweaks.MODID);
 
     //Items
-    public static RegistryObject<Item> MINICOAL, MINICHARCOAL, GOGGLELENS;
+    public static RegistryObject<Item> MINICOAL, MINICHARCOAL, GOGGLELENS, KNIFE;
 
     //Foods
-    public static final RegistryObject<Item> FRIEDEGG = ITEMS.register("friedegg", () -> new Item(new Item.Properties().group(MiniTweakGroup.MINITWEAKSGROUP).food(FoodLists.FriedEgg)));
+    public static RegistryObject<Item> FRIEDEGG, EGGSANDWICH, SCRAMBLEDEGG, BREADSLICE, TOAST;
 
     //Tools
     //Flint Tools
@@ -38,7 +38,6 @@ public class MiniTweakItems {
     public static RegistryObject<Item> STONE_PAXEL, IRON_PAXEL, GOLD_PAXEL, DIAMOND_PAXEL, NETHERITE_PAXEL;
 
     //Armor
-    //public static final RegistryObject<Item> NIGHTVISIONGOGGLES = ITEMS.register("item_nightvisiongoggles", () -> new ArmorItem(ArmorMaterial.IRON, EquipmentSlotType.HEAD, new Item.Properties().group(MiniTweakGroup.MINITWEAKSGROUP)));
     public static RegistryObject<Item> EMERALD_HELMET, EMERALD_CHESTPLATE, EMERALD_LEGGINGS, EMERALD_BOOTS;
     public static RegistryObject<Item> GOGGLES;
 
@@ -49,9 +48,12 @@ public class MiniTweakItems {
             MINICOAL = ITEMS.register("minicoal", () -> new MiniCoal(new Item.Properties().group(MiniTweakGroup.MINITWEAKSGROUP)));
             MINICHARCOAL = ITEMS.register("minicharcoal", () -> new MiniCharcoal(new Item.Properties().group(MiniTweakGroup.MINITWEAKSGROUP)));
         }
-        if(MiniTweaksConfig.COMMON.item_nightvisiongoggle.get()){
+        /*if(MiniTweaksConfig.COMMON.item_nightvisiongoggle.get()){
             GOGGLELENS = ITEMS.register("gogglelens", () -> new Item(new Item.Properties().group(MiniTweakGroup.MINITWEAKSGROUP)));
             GOGGLES = ITEMS.register("goggles_helmet", () -> new MiniTweaksArmorItem(MiniTweaksArmorMaterial.GOGGLES, EquipmentSlotType.HEAD, new Item.Properties().group(MiniTweakGroup.MINITWEAKSGROUP)));
+        }*/
+        if(MiniTweaksConfig.COMMON.food_friedegg.get()){
+            FRIEDEGG = ITEMS.register("friedegg", () -> new Item(new Item.Properties().group(MiniTweakGroup.MINITWEAKSGROUP).food(FoodLists.FriedEgg)));
         }
         if(MiniTweaksConfig.COMMON.tools_flint.get()){
             FLINT_SWORD = ITEMS.register("flint_sword", () -> new SwordItem(MiniTweaksToolTiers.FLINT, 1, 2f, new Item.Properties().group(MiniTweakGroup.MINITWEAKSGROUP)));
@@ -77,13 +79,13 @@ public class MiniTweakItems {
             EMERALD_HOE = ITEMS.register("emerald_hoe", () -> new HoeItem(MiniTweaksToolTiers.EMERALD, 1, 2f, new Item.Properties().group(MiniTweakGroup.MINITWEAKSGROUP)));
             EMERALD_PAXEL = ITEMS.register("emerald_paxel", () -> new PaxelItem(MiniTweaksToolTiers.EMERALD, 1, 2f, new Item.Properties().group(MiniTweakGroup.MINITWEAKSGROUP)));
         }
-        if(MiniTweaksConfig.COMMON.tools_paxels.get()){
+        /*if(MiniTweaksConfig.COMMON.tools_paxels.get()){
             STONE_PAXEL = ITEMS.register("stone_paxel", () -> new PaxelItem(ItemTier.STONE, 1, 2f, new Item.Properties().group(MiniTweakGroup.MINITWEAKSGROUP)));
             IRON_PAXEL = ITEMS.register("iron_paxel", () -> new PaxelItem(ItemTier.IRON, 1, 2f, new Item.Properties().group(MiniTweakGroup.MINITWEAKSGROUP)));
             GOLD_PAXEL = ITEMS.register("gold_paxel", () -> new PaxelItem(ItemTier.GOLD, 1, 2f, new Item.Properties().group(MiniTweakGroup.MINITWEAKSGROUP)));
             DIAMOND_PAXEL = ITEMS.register("diamond_paxel", () -> new PaxelItem(ItemTier.DIAMOND, 1, 2f, new Item.Properties().group(MiniTweakGroup.MINITWEAKSGROUP)));
             NETHERITE_PAXEL = ITEMS.register("netherite_paxel", () -> new PaxelItem(ItemTier.NETHERITE, 1, 2f, new Item.Properties().group(MiniTweakGroup.MINITWEAKSGROUP)));
-        }
+        }*/
         if(MiniTweaksConfig.COMMON.armor_emerald.get()){
             EMERALD_HELMET = ITEMS.register("emerald_helmet", () -> new ArmorItem(MiniTweaksArmorMaterial.EMERALD, EquipmentSlotType.HEAD, new Item.Properties().group(MiniTweakGroup.MINITWEAKSGROUP)));
             EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", () -> new ArmorItem(MiniTweaksArmorMaterial.EMERALD, EquipmentSlotType.CHEST, new Item.Properties().group(MiniTweakGroup.MINITWEAKSGROUP)));

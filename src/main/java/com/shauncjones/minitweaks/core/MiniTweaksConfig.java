@@ -32,6 +32,9 @@ public class MiniTweaksConfig {
         //Fuels
         public static ForgeConfigSpec.ConfigValue<Boolean> fuel_beds, fuels_doors, fuels_slabs, fuels_stairs, fuels_fence, fuels_boats, fuels_misc;
 
+        //Misc
+        public static ForgeConfigSpec.ConfigValue<Boolean> tools_whenmekaismpresent, tools_whentinkersispresent;
+
 
         public Common(ForgeConfigSpec.Builder builder) {
             builder.push("Blocks");
@@ -47,6 +50,9 @@ public class MiniTweaksConfig {
             builder.pop();
             builder.push("Foods");
             this.food_friedegg = builder.define("Load Fried Egg?", true);
+            this.food_eggsandwich = builder.define("Load Egg Sandwich?", true);
+            this.food_scrambledegg = builder.define("Load Scrambled Egg?", true);
+            this.food_breadslice = builder.define("Load Sliced Bread?", true);
             builder.pop();
             builder.push("Tools");
             this.tools_flint = builder.define("Load Flint Tools?", true);

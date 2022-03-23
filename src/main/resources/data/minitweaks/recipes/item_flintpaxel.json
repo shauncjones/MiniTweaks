@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#$%",
+    " * ",
+    " * "
+  ],
+  "key": {
+    "#": {
+      "item": "minitweaks:flint_axe"
+    },
+    "$": {
+      "item": "minitweaks:flint_pickaxe"
+    },
+    "%": {
+      "item": "minitweaks:flint_shovel"
+    },
+    "*": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "minitweaks:flint_paxel"
+  }
+}

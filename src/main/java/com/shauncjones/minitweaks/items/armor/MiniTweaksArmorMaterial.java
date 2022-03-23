@@ -30,7 +30,7 @@ public enum MiniTweaksArmorMaterial implements IArmorMaterial {
     //Netherite
     //Max Damage Factor: 37, Damage Reduction Array: {3,6,8,3}, Enchantability: 15, Toughness: 3.0F, Knockback Resistance: 0.1F, Ingredient: Netherite Ingot
 
-    EMERALD("emerald", 33, new int[]{2, 6, 6, 2}, 25, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> {
+    EMERALD("emerald", 35, new int[]{3, 6, 8, 3}, 25, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5F, 0.1F, () -> {
         return Ingredient.fromItems(Items.EMERALD);
     }),
     GOGGLES("goggles", 15, new int[]{1, 4, 5, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0F, 0.0F, () -> {

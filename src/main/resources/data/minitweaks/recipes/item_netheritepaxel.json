@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#$%",
+    " * ",
+    " * "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:netherite_axe"
+    },
+    "$": {
+      "item": "minecraft:netherite_pickaxe"
+    },
+    "%": {
+      "item": "minecraft:netherite_shovel"
+    },
+    "*": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "minitweaks:netherite_paxel"
+  }
+}

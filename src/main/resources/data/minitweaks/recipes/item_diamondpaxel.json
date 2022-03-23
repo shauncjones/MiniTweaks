@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#$%",
+    " * ",
+    " * "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:diamond_axe"
+    },
+    "$": {
+      "item": "minecraft:diamond_pickaxe"
+    },
+    "%": {
+      "item": "minecraft:diamond_shovel"
+    },
+    "*": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "minitweaks:diamond_paxel"
+  }
+}
